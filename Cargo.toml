@@ -1,0 +1,29 @@
+[package]
+authors = ["Jorge Aparicio <jorge@japaric.io>"]
+categories = ["no-std"]
+description = "Memory allocators backed by singletons that own statically allocated memory"
+edition = "2018"
+keywords = ["allocator", "singleton"]
+license = "MIT OR Apache-2.0"
+name = "alloc-singleton"
+readme = "README.md"
+repository = "https://github.com/japaric/alloc-singleton"
+version = "0.1.0"
+
+[dependencies]
+as-slice = "0.1.0"
+owned-singleton = "0.1.0"
+
+[dependencies.generic-array]
+optional = true
+version = "0.12.0"
+
+[dependencies.stable_deref_trait]
+default-features = false
+version = "1.1.1"
+
+[features]
+nightly = ["generic-array"]
+
+[package.metadata.docs.rs]
+features = ["nightly"]
