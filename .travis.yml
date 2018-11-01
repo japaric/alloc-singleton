@@ -3,7 +3,7 @@ cache: cargo
 
 matrix:
   include:
-    - rust: stable
+    - rust: beta
     - rust: nightly
 
 before_install: set -e
